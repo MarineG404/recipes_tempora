@@ -128,4 +128,13 @@ class UserRepository extends User {
 			singleValue: true
 		);
 	}
+
+
+
+	public static function getUsers(): array {
+		return ApplicationData::request(
+			query: "SELECT uid FROM " . Table::USERS->value,
+			returnType: PDO::FETCH_COLUMN
+		);
+	}
 }

@@ -97,6 +97,31 @@
 					->setAttributs(
 						attributs: [
 							"class" => "button button_secondary",
+							"href" => Route::getPath(name: "app_users_get"),
+						]
+					)
+					->setContent(content: "<i class='ri-group-line'></i>")
+					->build()
+			)
+			->setAccessRoles(accessRoles: [Role::ADMINISTRATOR->value])
+			->build()
+
+	?>
+
+	<?=
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
+			->setContent(content:
+				(new ElementBuilder)
+					->setElement(element: "a")
+					->setAttributs(
+						attributs: [
+							"class" => "button button_secondary",
 							"href" => Route::getPath(name: "app_account_disconnect_get"),
 							"title" => $componentNavbarLang->translate(key: "NAVBAR_DISCONNECT"),
 						]

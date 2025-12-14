@@ -13,9 +13,9 @@ class RoleFormat {
 	public static function format(int $role): string {
 		switch ($role) {
 			case 1:
-				return "PROFILE_USER";
+				return "MAIN_ROLE_USER";
 			case 10:
-				return "PROFILE_ADMIN";
+				return "MAIN_ROLE_ADMIN";
 			default:
 				return "Unknown";
 		}

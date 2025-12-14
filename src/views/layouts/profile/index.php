@@ -1,11 +1,11 @@
 <?php
 
 use App\Enums\Path;
-use App\Models\Repositories\RecipeRepository ;
 use App\Utils\RoleFormat;
 use Tempora\Utils\Lang;
 
 	include Path::COMPONENT_ACTIONS->value . "/navbar.php";
+	$mainLang = new Lang(filePath: "main/role");
 ?>
 <h1><?= $pageLang->translate(key: "PROFILE_TITLE") ?></h1>
 
@@ -15,9 +15,8 @@ use Tempora\Utils\Lang;
 
 	<?php
 	foreach (USER_ROLES as $role) {
-		dump(variable: $role);
 		?>
-		<p><?= $pageLang->translate(key: RoleFormat::format(role: $role)) ?></p>
+		<p><?= $mainLang->translate(key: RoleFormat::format(role: $role)) ?></p>
 		<?php
 	}
 	?>

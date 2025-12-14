@@ -31,8 +31,6 @@ class ProfileController extends Controller {
 		$userRepository->setUid(uid: $userUid);
 		$userRepository->hydrate();
 
-		dump($userRepository);
-
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
 			"/assets/styles/remixicon.css"
