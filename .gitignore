@@ -8,3 +8,5 @@ src/cache/*
 !.gitkeep
 public/assets/*
 *.min.*
+
+todo.md

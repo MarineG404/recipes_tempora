@@ -1,31 +1,29 @@
 <?php
 
-namespace App\Controllers\Dashboard;
+namespace App\Controllers\Recipes;
 
 use App\Enums\Path;
-use App\Enums\Role;
+use App\Models\Repositories\RecipeRepository;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 use Tempora\Utils\Lang;
 
-class DashboardController extends Controller {
+class RecipesController extends Controller {
 	#[RouteAttribute(
-		path: "/dashboard",
-		name: "app_dashboard_get",
+		path: "/recipes",
+		name: "app_recipes_get",
 		method: "GET",
-		description: "Dashboard page",
-		title: "DASHBOARD_TITLE",
+		description: "Recipes page",
+		title: "RECIPES_TITLE",
 		translateTitle: true,
-		translateFile: "pages/dashboard",
-		needLoginToBe: true,
-		accessRoles: [
-			Role::ADMINISTRATOR
-		]
+		translateFile: "pages/recipes",
 	)]
 
 	public function render(): void {
 		$pageData = $this->getPageData();
-		$pageLang = new Lang(filePath: "pages/dashboard");
+		$pageLang = new Lang(filePath: "pages/recipes");
+
+		$recipesUid = RecipeRepository::getRecipes();
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
@@ -39,7 +37,7 @@ class DashboardController extends Controller {
 
 		require Path::LAYOUT->value . "/header.php";
 
-		require Path::LAYOUT->value . "/dashboard/index.php";
+		require Path::LAYOUT->value . "/recipes/index.php";
 
 		include Path::LAYOUT->value . "/footer.php";
 	}

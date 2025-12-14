@@ -7,16 +7,6 @@
 	use Tempora\Utils\Minifier\Image;
 
 	$componentNavbarLang = new Lang(filePath: "components/actions/navbar");
-
-	$itemContainer = new ElementBuilder();
-	$itemContainer
-		->setElement(element: "div")
-		->setAttributs(
-			attributs: [
-				"class" => "item",
-			]
-		)
-	;
 ?>
 
 <nav>
@@ -45,7 +35,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -62,32 +58,39 @@
 			->build()
 	?>
 
+
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
 					->setAttributs(
 						attributs: [
 							"class" => "button button_secondary",
-							"href" => Route::getPath(name: "app_dashboard_get"),
-							"title" => $componentNavbarLang->translate(key: "NAVBAR_DASHBOARD"),
+							"href" => Route::getPath(name: "app_recipes_get"),
+							"title" => $componentNavbarLang->translate(key: "NAVBAR_RECIPES"),
 						]
 					)
-					->setContent(content: "<i class='ri-speed-up-line'></i> " . $componentNavbarLang->translate(key: "NAVBAR_DASHBOARD"))
+					->setContent(content: "<i class='ri-book-2-line'></i> " . $componentNavbarLang->translate(key: "NAVBAR_RECIPES"))
 					->build()
 			)
-			->setAccessRoles(
-				accessRoles: [
-					Role::ADMINISTRATOR->value
-				]
-			)
-			->setNeedLoginToBe(needLoginToBe: true)
 			->build()
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -106,7 +109,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -126,7 +135,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
