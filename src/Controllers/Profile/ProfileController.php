@@ -26,10 +26,10 @@ class ProfileController extends Controller {
 		$pageData = $this->getPageData();
 		$pageLang = new Lang(filePath: "pages/profile");
 
-		$userUid = $_SESSION["user"]["uid"];
-		$userRepository = new UserRepository();
-		$userRepository->setUid(uid: $userUid);
-		$userRepository->hydrate();
+		$userRepository = new UserRepository()
+			->setUid(uid: $_SESSION["user"]["uid"])
+			->hydrate()
+		;
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",

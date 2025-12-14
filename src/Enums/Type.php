@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums ;
+namespace App\Enums;
 
 enum Type: int {
 	case SAVORY = 1;
