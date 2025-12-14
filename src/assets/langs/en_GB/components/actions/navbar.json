@@ -3,5 +3,6 @@
 	"NAVBAR_LOGIN": "Login",
 	"NAVBAR_REGISTER": "Create account",
 	"NAVBAR_DISCONNECT": "Logout",
-	"NAVBAR_RECIPES": "Recipes"
+	"NAVBAR_RECIPES": "Recipes",
+	"NAVBAR_PROFILE": "Profile"
 }

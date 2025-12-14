@@ -173,4 +173,30 @@
 	?>
 
 	<?php include Path::COMPONENT_ACTIONS->value . "/lang_selection.php"; ?>
+
+	<?=
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
+			->setContent(content:
+				(new ElementBuilder)
+					->setElement(element: "a")
+					->setAttributs(
+						attributs: [
+							"class" => "button button_secondary",
+							"href" => Route::getPath(name: "app_profile_get"),
+							"title" => $componentNavbarLang->translate(key: "NAVBAR_PROFILE"),
+						]
+					)
+					->setContent(content: "<i class='ri-user-line'></i> " . $componentNavbarLang->translate(key: "NAVBAR_PROFILE"))
+					->build()
+			)
+			->setAccessRoles(accessRoles: [])
+			->setNeedLoginToBe(needLoginToBe: true)
+			->build()
+	?>
 </nav>
