@@ -184,10 +184,13 @@ nav {
 .account_container,
 .login_reset_container,
 .reset_password_container {
-	width: fit-content;
+	margin: auto;
+	margin-top: 50px;
+	width: 25%;
 	padding: 20px;
 	background-color: var(--form-background-color);
-	border-radius: var(--border-radius);
+	border-radius: var(--large-border-radius);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .login,
@@ -198,5 +201,34 @@ nav {
 .update_password {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 20px;
+	padding: 15px;
+
+	input {
+		padding: 15px;
+		border: none;
+		border-radius: var(--border-radius);
+		background-color: var(--item-background-color);
+		color: var(--text-color);
+		transition: box-shadow 200ms;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 2px var(--accent-color);
+		}
+	}
+
+	button {
+		padding: 15px;
+		border: none;
+		border-radius: var(--border-radius);
+		background-color: var(--primary-color);
+		color: var(--text-color);
+		cursor: pointer;
+		transition: background-color 200ms;
+
+		&:hover {
+			background-color: var(--accent-color);
+		}
+	}
 }
