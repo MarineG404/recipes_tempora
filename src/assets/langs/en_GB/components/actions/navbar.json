@@ -4,5 +4,6 @@
 	"NAVBAR_REGISTER": "Create account",
 	"NAVBAR_DISCONNECT": "Logout",
 	"NAVBAR_RECIPES": "Recipes",
-	"NAVBAR_PROFILE": "Profile"
+	"NAVBAR_PROFILE": "Profile",
+	"NAVBAR_USERS": "Users"
 }

@@ -4,5 +4,6 @@
 	"NAVBAR_REGISTER": "Créer un compte",
 	"NAVBAR_DISCONNECT": "Déconnexion",
 	"NAVBAR_RECIPES": "Recettes",
-	"NAVBAR_PROFILE": "Profil"
+	"NAVBAR_PROFILE": "Profil",
+	"NAVBAR_USERS": "Utilisateur·ice·s"
 }
