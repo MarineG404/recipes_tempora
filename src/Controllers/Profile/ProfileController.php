@@ -33,7 +33,8 @@ class ProfileController extends Controller {
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
-			"/assets/styles/remixicon.css"
+			"/assets/styles/remixicon.css",
+			"/assets/styles/profile/profile.css"
 		]);
 
 		$this->setScripts(scripts: [

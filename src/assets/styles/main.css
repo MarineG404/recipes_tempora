@@ -13,6 +13,7 @@
 
 	--background-color: #fdfafc;
 	--form-background-color: #f5e6ed;
+	--item-background-color: #ffffff;
 	--text-color: #1a0a14;
 	--primary-color: #86204d;
 	--accent-color: #a82e5c;
@@ -22,6 +23,7 @@
 
 	--dark-background-color: #0f0509;
 	--dark-form-background-color: #2d0a1a;
+	--dark-item-background-color: #3a1e2e;
 	--dark-text-color: #f5e6ed;
 	--dark-primary-color: #c94277;
 	--dark-accent-color: #e05180;
@@ -33,6 +35,7 @@
 [data-theme="dark"] {
 	--background-color: var(--dark-background-color);
 	--form-background-color: var(--dark-form-background-color);
+	--item-background-color: var(--dark-item-background-color);
 	--text-color: var(--dark-text-color);
 	--primary-color: var(--dark-primary-color);
 	--accent-color: var(--dark-accent-color);
@@ -45,6 +48,7 @@
 	@media (prefers-color-scheme: dark) {
 		--background-color: var(--dark-background-color);
 		--form-background-color: var(--dark-form-background-color);
+		--item-background-color: var(--dark-item-background-color);
 		--text-color: var(--dark-text-color);
 		--primary-color: var(--dark-primary-color);
 		--accent-color: var(--dark-accent-color);

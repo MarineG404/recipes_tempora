@@ -1,0 +1,50 @@
+.profile_container {
+	margin: auto;
+	margin-top: 40px;
+	width: min(500px, 90%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+	background-color: var(--form-background-color);
+	border-radius: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+	h1 {
+		margin-bottom: 20px;
+		color: var(--accent-color);
+	}
+
+	.profile {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.profile_item {
+			padding: 20px;
+			background-color: var(--item-background-color);
+			border-radius: var(--large-border-radius);
+
+			border-left: 2px solid var(--accent-color);
+		}
+	}
+
+	.actions {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+
+		button {
+			padding: 10px 20px;
+			border: none;
+			border-radius: var(--border-radius);
+			cursor: pointer;
+			font-size: 16px;
+
+			&:hover {
+				background-color: var(--accent-color);
+			}
+		}
+	}
+}
