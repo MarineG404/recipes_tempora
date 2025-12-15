@@ -6,34 +6,37 @@
    ============================================== */
 
 :root {
-	--notification-background-color: #7186ff;
+	--notification-background-color: #ff6b35;
 	--border-radius: 9px;
 	--large-border-radius: 12px;
 	--xxl-large-border-radius: 50px;
 
-	--background-color: #fdfafc;
-	--form-background-color: #f5e6ed;
+	--background-color: #fffbf5;
+	--navbar-background-color: #ff6b35;
+	--form-background-color: #fff4e6;
 	--item-background-color: #ffffff;
-	--text-color: #1a0a14;
-	--primary-color: #86204d;
-	--accent-color: #a82e5c;
+	--text-color: #2d1810;
+	--primary-color: #ff6b35;
+	--accent-color: #ff8c42;
 	--success-color: #22c55e;
 	--error-color: #ef4444;
-	--warning-color: #f59e0b;
+	--warning-color: #ffa500;
 
-	--dark-background-color: #0f0509;
-	--dark-form-background-color: #2d0a1a;
-	--dark-item-background-color: #3a1e2e;
-	--dark-text-color: #f5e6ed;
-	--dark-primary-color: #c94277;
-	--dark-accent-color: #e05180;
+	--dark-background-color: #1a0f08;
+	--dark-navbar-background-color: #ff6b35;
+	--dark-form-background-color: #2d1810;
+	--dark-item-background-color: #3d2418;
+	--dark-text-color: #fff4e6;
+	--dark-primary-color: #ff8c42;
+	--dark-accent-color: #ffad5a;
 	--dark-success-color: #22c55e;
 	--dark-error-color: #ef4444;
-	--dark-warning-color: #f59e0b;
+	--dark-warning-color: #ffa500;
 }
 
 [data-theme="dark"] {
 	--background-color: var(--dark-background-color);
+	--navbar-background-color: var(--dark-navbar-background-color);
 	--form-background-color: var(--dark-form-background-color);
 	--item-background-color: var(--dark-item-background-color);
 	--text-color: var(--dark-text-color);
@@ -47,6 +50,7 @@
 [data-theme="system"] {
 	@media (prefers-color-scheme: dark) {
 		--background-color: var(--dark-background-color);
+		--navbar-background-color: var(--dark-navbar-background-color);
 		--form-background-color: var(--dark-form-background-color);
 		--item-background-color: var(--dark-item-background-color);
 		--text-color: var(--dark-text-color);
@@ -118,7 +122,8 @@ nav {
 	align-items: center;
 
 	padding: 15px 30px;
-	background-color: var(--form-background-color);
+	background-color: var(--navbar-background-color);
+	color: var(--text-color);
 	justify-content: space-between;
 
 	font-size: 20px;
