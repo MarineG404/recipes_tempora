@@ -1,5 +1,8 @@
 {
 	"USERS_TITLE": "Users",
 	"USERS_EMAIL": "Email",
-	"USERS_ROLE": "Role"
+	"USERS_ROLE": "Role",
+	"USERS_NAME": "Name",
+	"USERS_EDIT_BUTTON": "Edit User",
+	"USERS_DELETE_BUTTON": "Delete User"
 }

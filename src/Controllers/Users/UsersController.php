@@ -29,6 +29,7 @@ class UsersController extends Controller {
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
+			"/assets/styles/users/users.css",
 			"/assets/styles/remixicon.css"
 		]);
 

@@ -1,5 +1,8 @@
 {
 	"USERS_TITLE": "Utilisateur·ice·s",
 	"USERS_EMAIL": "Email",
-	"USERS_ROLE": "Rôle"
+	"USERS_ROLE": "Rôle",
+	"USERS_NAME": "Nom",
+	"USERS_EDIT_BUTTON": "Modifier",
+	"USERS_DELETE_BUTTON": "Supprimer"
 }

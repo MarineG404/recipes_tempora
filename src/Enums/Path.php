@@ -9,4 +9,5 @@ enum Path: string {
 	case COMPONENT_ACTIONS = APP_DIR . "/src/views/components/actions";
 	case COMPONENT_FORMS = APP_DIR . "/src/views/components/forms";
 	case COMPONENT_TILES = APP_DIR . "/src/views/components/tiles";
+	case COMPONENT_TABLES = APP_DIR . "/src/views/components/tables";
 }
