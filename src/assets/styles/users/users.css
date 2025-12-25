@@ -1,77 +1,51 @@
+h1 {
+	text-align: center;
+	margin-top: 20px;
+	color: var(--primary-color);
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
 .users_container {
-	margin: 40px auto;
-	width: 70%;
-	max-width: 1200px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px;
-	background-color: var(--form-background-color);
-	border-radius: var(--large-border-radius);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin: auto;
+	margin-top: 30px;
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
 
-	h1 {
-		margin-bottom: 30px;
-		color: var(--accent-color);
-		font-size: 2rem;
-	}
-
-	table {
+	.user_card {
 		width: 100%;
-		border-collapse: collapse;
-		background-color: var(--item-background-color);
+		background-color: var(--form-background-color);
 		border-radius: var(--large-border-radius);
-		overflow: hidden;
 
-		thead tr {
-			background-color: var(--primary-color);
-			color: var(--form-background-color);
+		.item {
+			padding: 15px;
 		}
 
-		th {
-			text-transform: uppercase;
-		}
+		.actions {
+			display: flex;
+			gap: 12px;
+			margin-top: 20px;
+			padding: 0 20px 20px 20px;
 
+			button {
+				flex: 1;
+				padding: 8px 12px;
+				border-radius: var(--border-radius);
+				border: none;
+				cursor: pointer;
+				font-size: 0.9rem;
 
-		th,
-		td {
-			font-size: 0.85rem;
-			padding: 20px 5px;
-		}
+				&.edit_btn {
+					background-color: var(--primary-color);
+					color: var(--background-color);
+				}
 
-		tbody tr {
-			border-bottom: 1px solid var(--form-background-color);
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-
-		td {
-			color: var(--text-color);
-
-			&:last-child {
-				display: flex;
-				gap: 10px;
-			}
-		}
-
-		button {
-			padding: 8px 16px;
-			border: none;
-			border-radius: var(--border-radius);
-			cursor: pointer;
-			font-weight: 500;
-			font-size: 0.9rem;
-
-			&:first-of-type {
-				background-color: var(--accent-color);
-				color: var(--form-background-color);
-			}
-
-			&:last-of-type {
-				background-color: var(--error-color);
-				color: white;
+				&.delete_btn {
+					background-color: var(--error-color);
+					color: white;
+				}
 			}
 		}
 	}

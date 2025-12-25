@@ -11,24 +11,24 @@
 	--large-border-radius: 12px;
 	--xxl-large-border-radius: 50px;
 
-	--background-color: #fffbf5;
+	--background-color: #fff8f0;
 	--navbar-background-color: #ff6b35;
-	--form-background-color: #fff4e6;
+	--form-background-color: #d4f1f9;
 	--item-background-color: #ffffff;
-	--text-color: #2d1810;
+	--text-color: #1a0800;
 	--primary-color: #ff6b35;
-	--accent-color: #ff8c42;
+	--accent-color: #00a8cc;
 	--success-color: #22c55e;
 	--error-color: #ef4444;
 	--warning-color: #ffa500;
 
 	--dark-background-color: #1a0f08;
 	--dark-navbar-background-color: #ff6b35;
-	--dark-form-background-color: #2d1810;
+	--dark-form-background-color: #1a3d4d;
 	--dark-item-background-color: #3d2418;
 	--dark-text-color: #fff4e6;
 	--dark-primary-color: #ff8c42;
-	--dark-accent-color: #ffad5a;
+	--dark-accent-color: #00d4ff;
 	--dark-success-color: #22c55e;
 	--dark-error-color: #ef4444;
 	--dark-warning-color: #ffa500;
