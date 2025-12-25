@@ -7,17 +7,19 @@
 	$mainLang = new Lang(filePath: "main/role");
 ?>
 
-<h1><?= $pageLang->translate(key: "USERS_TITLE") ?></h1>
-
 <div class="users_container">
-	<?php
-		foreach ($usersUid as $userUid){
-			$user = new UserRepository()
-				->setUid(uid: $userUid)
-				->hydrate()
-			;
+	<h1><?= $pageLang->translate(key: "USERS_TITLE") ?></h1>
 
-			require Path::COMPONENT_TILES->value . "/user.php";
-		}
-	?>
+	<div class="user-cards">
+		<?php
+			foreach ($usersUid as $userUid){
+				$user = new UserRepository()
+					->setUid(uid: $userUid)
+					->hydrate()
+				;
+
+				require Path::COMPONENT_TILES->value . "/user.php";
+			}
+		?>
+	</div>
 </div>

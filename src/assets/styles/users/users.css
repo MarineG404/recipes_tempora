@@ -1,51 +1,98 @@
-h1 {
-	text-align: center;
-	color: var(--primary-color);
-	font-size: 2.5rem;
-	font-weight: 700;
+.users_container {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	gap: 20px;
+	width: 80%;
+
+	h1 {
+		margin: 0;
+		color: var(--primary-color);
+	}
+
+	.user-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 20px;
+	}
 }
 
-.users_container {
-	margin: auto;
-	margin-top: 30px;
-	width: 80%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.user_card {
+	background-color: var(--card-background-color);
+	border-radius: var(--large-border-radius);
+	border-left: 4px solid var(--primary-color);
 	gap: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 
-	.user_card {
-		width: 100%;
-		background-color: var(--form-background-color);
-		border-radius: var(--large-border-radius);
+	h3 {
+		margin: 0;
+		color: var(--accent-color);
+	}
 
-		.item {
-			padding: 15px;
-		}
+	.user-meta {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		border-top: 1px solid var(--border-color);
+		padding-top: 15px;
 
-		.actions {
+		.meta-item {
 			display: flex;
-			gap: 12px;
-			margin-top: 20px;
-			padding: 0 20px 20px 20px;
+			align-items: center;
+			gap: 10px;
+			color: var(--text-color);
 
-			button {
-				flex: 1;
-				padding: 8px 12px;
-				border-radius: var(--border-radius);
-				border: none;
-				cursor: pointer;
-				font-size: 0.9rem;
-
-				&.edit_btn {
-					background-color: var(--primary-color);
-					color: var(--background-color);
-				}
-
-				&.delete_btn {
-					background-color: var(--error-color);
-					color: white;
-				}
+			i {
+				color: var(--primary-color);
 			}
+
+			.role_badge {
+				background-color: var(--primary-color);
+				color: var(--background-color);
+				padding: 4px 12px;
+				border-radius: var(--border-radius);
+				margin-right: 8px;
+			}
+		}
+	}
+
+	.actions {
+		display: flex;
+		gap: 12px;
+		margin-top: 10px;
+
+		button {
+			flex: 1;
+			padding: 10px 15px;
+			border-radius: var(--border-radius);
+			border: none;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+
+			&.edit_btn {
+				background-color: var(--primary-color);
+				color: var(--background-color);
+			}
+
+			&.delete_btn {
+				background-color: var(--error-color);
+				color: white;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.users_container {
+		width: 90%;
+
+		.user-cards {
+			grid-template-columns: 1fr;
 		}
 	}
 }
