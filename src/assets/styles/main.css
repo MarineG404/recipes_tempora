@@ -116,7 +116,6 @@ nav {
 	width: 60%;
 	border-radius: var(--xxl-large-border-radius);
 
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -134,7 +133,7 @@ nav {
 		gap: 30px;
 
 		.item {
-			&hover {
+			&:hover {
 				text-decoration: underline;
 				background-color: var(--accent-color);
 			}
@@ -144,6 +143,31 @@ nav {
 	a {
 		text-decoration: none;
 		color: var(--text-color);
+	}
+
+	/* responsive styles */
+	@media (max-width: 1370px) {
+		width: auto;
+		max-width: 60%;
+		padding: 10px 15px;
+		font-size: 18px;
+
+		.item_container {
+			gap: 5px;
+
+			.item a {
+				font-size: 0;
+
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+
+		select {
+			max-width: 50px;
+			font-size: 14px;
+		}
 	}
 }
 
