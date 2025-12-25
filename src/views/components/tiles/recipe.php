@@ -2,10 +2,11 @@
 
 use App\Utils\DifficultyFormat;
 use App\Utils\TypeFormat;
+use Tempora\Utils\Cache\Route;
 
 ?>
 <div class="recipe-card">
-	<h3><?= htmlspecialchars(string: $recipe->getName() ?? "") ?></h3>
+	<h3><a href="<?= Route::getPath(name: "app_recipe_details_get", options: ["uid" => $recipe->getUid() ?? ""]) ?>"><?= htmlspecialchars(string: $recipe->getName() ?? "") ?></a></h3>
 	<p><?= htmlspecialchars(string: $recipe->getDescription() ?? "") ?></p>
 	<p><strong><?= $pageLang->translate(key: "STEPS") ?>:</strong> <?= htmlspecialchars(string: $recipe->getSteps() ?? "") ?></p>
 	<p><strong><?= $pageLang->translate(key: "DURATION") ?>:</strong> <?= htmlspecialchars(string: $recipe->getDuration() ?? "") ?></p>

@@ -1,5 +1,6 @@
 {
 	"RECIPES_TITLE": "Recettes",
+	"RECIPE_DETAILS_TITLE": "Détails de la recette",
 	"STEPS": "Étapes",
 	"DURATION": "Durée",
 	"DIFFICULTY": "Difficulté",
@@ -7,5 +8,6 @@
 	"PEOPLE": "Personnes",
 	"TYPE": "Type",
 	"INGREDIENT": "Ingrédient",
-	"QUANTITY": "Quantité"
+	"QUANTITY": "Quantité",
+	"NO_KITCHENWARE": "Pas d'ustensiles de précisés"
 }
