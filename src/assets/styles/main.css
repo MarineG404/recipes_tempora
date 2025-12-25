@@ -135,7 +135,6 @@ nav {
 		.item {
 			&:hover {
 				text-decoration: underline;
-				background-color: var(--accent-color);
 			}
 		}
 	}
