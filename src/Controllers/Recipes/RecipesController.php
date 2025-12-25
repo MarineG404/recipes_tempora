@@ -27,7 +27,8 @@ class RecipesController extends Controller {
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
-			"/assets/styles/remixicon.css"
+			"/assets/styles/remixicon.css",
+			"/assets/styles/recipes/recipes.css"
 		]);
 
 		$this->setScripts(scripts: [
