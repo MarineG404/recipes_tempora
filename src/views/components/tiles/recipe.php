@@ -29,6 +29,6 @@
 
 	<div class="recipe-author">
 		<i class="ri-user-line"></i>
-		Auteur</span>
+		<span><?= htmlspecialchars(string: $recipe->getChef()->getName() ?? "") . ' ' . htmlspecialchars(string: $recipe->getChef()->getSurname() ?? "") ?></span>
 	</div>
 </div>

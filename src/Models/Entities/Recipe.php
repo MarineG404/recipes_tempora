@@ -6,6 +6,7 @@ class Recipe {
 	private ?string $uid;
 
 	private User $author;
+	private User $chef ;
 	private ?string $name;
 	private ?string $description;
 	// Ingredient's array entity
@@ -255,6 +256,28 @@ class Recipe {
 	 */
 	public function setType($type): self {
 		$this->type = $type;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of chef
+	 *
+	 * @return mixed
+	 */
+	public function getChef(): mixed {
+		return $this->chef;
+	}
+
+	/**
+	 * Set the value of chef
+	 *
+	 * @param mixed $chef
+	 *
+	 * @return self
+	 */
+	public function setChef($chef): self {
+		$this->chef = $chef;
 
 		return $this;
 	}

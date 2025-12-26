@@ -13,13 +13,27 @@ use Tempora\Utils\Lang;
 
 	<h1><?= ucfirst(htmlspecialchars(string: $recipe->getName() ?? "")) ?></h1>
 
-	<?php if ($recipe->getDescription() != null): ?>
-		<div class="description">
-			<i class="ri-news-line"></i>
-			<?= ucfirst(htmlspecialchars(string: $recipe->getDescription() ?? "")) ?>
-		</div>
-	<?php endif; ?>
+	<div class="description">
 
+		<?php if ($recipe->getDescription() !== null && $recipe->getDescription() !== ""): ?>
+			<div class="item">
+				<i class="ri-news-line"></i>
+				<?= ucfirst(htmlspecialchars(string: $recipe->getDescription() ?? "")) ?>
+			</div>
+		<?php endif; ?>
+
+		<div class="item">
+			<i class="ri-user-line"></i>
+			<?= ucfirst(htmlspecialchars(string: $recipe->getChef()->getName() ?? "")) . ' ' . strtoupper(string: htmlspecialchars(string: $recipe->getChef()->getSurname() ?? "")) ?>
+		</div>
+
+		<?php if ($recipe->getAuthor()->getUid() !== $recipe->getChef()->getUid()): ?>
+			<div class="item">
+				<i class="ri-pencil-line"></i>
+				<?= ucfirst(htmlspecialchars(string: $recipe->getAuthor()->getName() ?? "")) . ' ' . strtoupper(string: htmlspecialchars(string: $recipe->getAuthor()->getSurname() ?? "")) ?>
+			</div>
+		<?php endif; ?>
+	</div>
 
 	<div class="info">
 		<div class="item">
