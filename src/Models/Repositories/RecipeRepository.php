@@ -20,18 +20,19 @@ class RecipeRepository extends Recipe {
 			singleValue: true
 		);
 
-		$ingredientsId = ApplicationData::request(
+		$ingredientsData = ApplicationData::request(
 			query: "SELECT id_ingredient, quantity FROM " . Table::RECIPE_INGREDIENTS->value . " WHERE uid_recipe = :uid_recipe",
 			data: [
 				"uid_recipe" => $this->getUid(),
 			],
-			returnType: PDO::FETCH_COLUMN
+			returnType: PDO::FETCH_ASSOC
 		);
 
 		$ingredients = [];
-		foreach ($ingredientsId as $id) {
-			$ingredientRepo = New IngredientRepository();
-			$ingredientRepo->setId(id: $id);
+		foreach ($ingredientsData as $ingredientData) {
+			$ingredientRepo = new IngredientRepository();
+			$ingredientRepo->setId(id: $ingredientData['id_ingredient']);
+			$ingredientRepo->setQuantity(quantity: $ingredientData['quantity']);
 			$ingredientRepo->hydrate();
 			$ingredients[] = $ingredientRepo;
 		}
@@ -61,6 +62,27 @@ class RecipeRepository extends Recipe {
 		}
 
 		return $this;
+	}
+
+	public function addRecipe(): void {
+
+		ApplicationData::request(
+			query: "INSERT INTO " . Table::RECIPES->value . " (uid, uid_user, uid_chef, name, description, steps, duration, id_difficulty, kitchenware, nb_people, id_type) VALUES (:uid, :uid_user, :uid_chef, :name, :description, :steps, :duration, :id_difficulty, :kitchenware, :nb_people, :id_type)",
+			data: [
+				"uid" => $this->getUid(),
+				"uid_user" => $this->getAuthor()->getUid(),
+				"uid_chef" => $this->getChef()->getUid(),
+				"name" => $this->getName(),
+				"description" => $this->getDescription(),
+				"steps" => $this->getSteps(),
+				"duration" => $this->getDuration(),
+				"id_difficulty" => $this->getDifficulty(),
+				"kitchenware" => $this->getKitchenware(),
+				"nb_people" => $this->getPeople(),
+				"id_type" => $this->getType(),
+			],
+			returnType: null
+		);
 	}
 
 	public static function getRecipes(): array {

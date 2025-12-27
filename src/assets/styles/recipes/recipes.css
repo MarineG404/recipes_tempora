@@ -5,10 +5,36 @@
 	gap: 20px;
 	width: 80%;
 
+	.recipes-header {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	button {
+		width: fit-content;
+		background-color: var(--primary-color);
+		color: var(--background-color);
+		border: none;
+		padding: 10px 16px;
+		border-radius: var(--large-border-radius);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
 	.recipe-cards {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 20px;
+		margin-bottom: 20px;
 	}
 }
 

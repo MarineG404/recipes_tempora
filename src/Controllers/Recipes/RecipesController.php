@@ -28,12 +28,16 @@ class RecipesController extends Controller {
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",
 			"/assets/styles/remixicon.css",
-			"/assets/styles/recipes/recipes.css"
+			"/assets/styles/recipes/recipes.css",
+			"/assets/styles/modal.css",
+			"/assets/styles/recipes/modal.css"
 		]);
 
 		$this->setScripts(scripts: [
 			"/assets/scripts/engine.js",
-			"/assets/scripts/theme.js"
+			"/assets/scripts/theme.js",
+			"/assets/scripts/modal.js",
+			"/assets/scripts/recipes/addRecipe.js"
 		]);
 
 		require Path::LAYOUT->value . "/header.php";

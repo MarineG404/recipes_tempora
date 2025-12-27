@@ -7,7 +7,14 @@
 ?>
 
 <div class="recipes-container">
-	<h1><?= $pageLang->translate(key: "RECIPES_TITLE") ?></h1>
+	<div class="recipes-header">
+		<h1><?= $pageLang->translate(key: "RECIPES_TITLE") ?></h1>
+		<?php if (isset($_SESSION["user"]["uid"])): ?>
+			<button class="create_recipe_btn">
+				<i class="ri-add-line"></i>
+			</button>
+		<?php endif ?>
+	</div>
 
 	<div class="recipe-cards">
 		<?php
@@ -22,4 +29,12 @@
 			}
 		?>
 	</div>
+</div>
+
+<div class="modal_container">
+	<?php
+		if (isset($_SESSION["user"]["uid"])){
+			include Path::COMPONENT_FORMS->value . "/recipe_form.php";
+		}
+	?>
 </div>

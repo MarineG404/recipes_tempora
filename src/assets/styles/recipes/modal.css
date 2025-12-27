@@ -1,0 +1,103 @@
+.modal_recipe_container {
+	width: 50%;
+	height: fit-content;
+	background-color: var(--card-background-color);
+	border-radius: var(--large-border-radius);
+	padding: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	h2 {
+		color: var(--accent-color);
+		margin: 0
+	}
+
+	.recipe_form {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	input,
+	textarea,
+	select {
+		padding: 10px;
+		border: 1px solid var(--border-color);
+		border-radius: var(--border-radius);
+		background-color: var(--background-color);
+		color: var(--text-color);
+		font-size: 1rem;
+	}
+
+	button {
+		padding: 10px 15px;
+		border-radius: var(--border-radius);
+		border: none;
+		cursor: pointer;
+		background-color: var(--primary-color);
+		color: var(--background-color);
+		font-size: 1rem;
+	}
+
+	.ingredients-container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.ingredient-row {
+			display: grid;
+			grid-template-columns: 1fr 2fr auto;
+			gap: 10px;
+			align-items: center;
+
+			select {
+				width: 100%;
+			}
+
+			.remove-ingredient-btn {
+				padding: 8px 12px;
+				background-color: var(--error-color);
+				color: white;
+				border: none;
+				border-radius: var(--border-radius);
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:hover:not(:disabled) {
+					opacity: 0.8;
+				}
+
+				&:disabled {
+					opacity: 0.3;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+
+	.add-ingredient-btn {
+		width: fit-content;
+		padding: 8px 16px;
+		background-color: var(--accent-color);
+		color: var(--background-color);
+		border: none;
+		border-radius: var(--border-radius);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	@media (max-width: 768px){
+		width: 80%;
+	}
+
+}

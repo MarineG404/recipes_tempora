@@ -20,20 +20,33 @@ class IngredientRepository extends Ingredient {
 			singleValue: true
 		);
 
-		$ingredientQuantity = ApplicationData::request(
-			query: "SELECT quantity FROM " . Table::RECIPE_INGREDIENTS->value . " WHERE id_ingredient = :id_ingredient",
-			data: [
-				"id_ingredient" => $this->getId()
-			],
-			returnType: PDO::FETCH_COLUMN,
-			singleValue: true
-		);
-
 		if ($ingredientData != null) {
 			$this->setName(name: $ingredientData['name']);
-			$this->setQuantity(quantity: $ingredientQuantity);
+			// Quantity is already set from recipe_ingredients table before hydrate()
 		}
 
 		return $this;
+	}
+
+	public function addRecipeIngredient(string $recipeUid) {
+		return ApplicationData::request(
+			query: "INSERT INTO " . Table::RECIPE_INGREDIENTS->value . " (uid_recipe, id_ingredient, quantity) VALUES (:uid_recipe, :id_ingredient, :quantity)",
+			data: [
+				"uid_recipe" => $recipeUid,
+				"id_ingredient" => $this->getId(),
+				"quantity" => $this->getQuantity()
+			],
+			returnType: null,
+			singleValue: false
+		);
+	}
+
+	public static function getAllIngredients(): array {
+		return ApplicationData::request(
+			query: "SELECT id, name FROM " . Table::INGREDIENTS->value . " ORDER BY name ASC",
+			data: [],
+			returnType: PDO::FETCH_ASSOC,
+			singleValue: false
+		);
 	}
 }
