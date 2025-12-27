@@ -46,6 +46,12 @@
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	box-shadow: 0 4px 6px var(--shadow-light);
+	transition: box-shadow 0.3s ease;
+
+	&:hover {
+		box-shadow: 0 6px 10px var(--shadow-medium);
+	}
 
 	h3 {
 		margin: 0;

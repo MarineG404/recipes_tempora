@@ -24,6 +24,9 @@
 	--error-color: #ef4444;
 	--warning-color: #ffa500;
 
+	--shadow-light: #0000001a;
+	--shadow-medium: #00000033;
+
 	--dark-background-color: #1a0f08;
 	--dark-navbar-background-color: #ff6b35;
 	--dark-form-background-color: #1a3d4d;
@@ -35,6 +38,9 @@
 	--dark-error-color: #ef4444;
 	--dark-warning-color: #ffa500;
 	--dark-card-background-color: #2a1a12;
+
+	--dark-shadow-light: #ffffff1a;
+	--dark-shadow-medium: #ffffff33;
 }
 
 [data-theme="dark"] {
@@ -49,6 +55,9 @@
 	--error-color: var(--dark-error-color);
 	--warning-color: var(--dark-warning-color);
 	--card-background-color: var(--dark-card-background-color);
+
+	--shadow-light: var(--dark-shadow-light);
+	--shadow-medium: var(--dark-shadow-medium);
 }
 
 [data-theme="system"] {
@@ -64,6 +73,9 @@
 		--error-color: var(--dark-error-color);
 		--warning-color: var(--dark-warning-color);
 		--card-background-color: var(--dark-card-background-color);
+
+		--shadow-light: var(--dark-shadow-light);
+		--shadow-medium: var(--dark-shadow-medium);
 	}
 }
 
@@ -219,7 +231,7 @@ nav {
 	padding: 20px;
 	background-color: var(--form-background-color);
 	border-radius: var(--large-border-radius);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px var(--shadow-light);
 }
 
 .login,
