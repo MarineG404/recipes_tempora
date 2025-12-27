@@ -97,7 +97,6 @@ use Tempora\Utils\Lang;
 
 
 		// kitchenware
-
 		$input = new ElementBuilder ;
 		$input
 			->setElement(element: "input")
@@ -229,8 +228,6 @@ use Tempora\Utils\Lang;
 		;
 		$form->addInput(input: $select);
 
-
-		// difficulté
 		$optionsHtml = "";
 		foreach (Difficulty::cases() as $difficulty) {
 			$selected = (isset($pageData["recipe_difficulty"]) && $pageData["recipe_difficulty"] == $difficulty->value) ? "selected" : "";
