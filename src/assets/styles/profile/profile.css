@@ -47,4 +47,9 @@
 			}
 		}
 	}
+
+	@media(max-width: 600px) {
+		padding: 20px;
+		width: min(300px, 90%);
+	}
 }
